@@ -1,4 +1,6 @@
-# docker-whale
+# sample-docker
+
+Simple project to test Docker build, cache and push to DockerHub.
 
 Run me : `docker run -p80:80 ushamandya/whale-example`
 
