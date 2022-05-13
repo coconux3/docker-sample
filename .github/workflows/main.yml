@@ -40,7 +40,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
         name: Build with github sha and push
-        id: docker_build
+        id: docker_build2
         uses: docker/build-push-action@v2
         with:
           context: ./ 
@@ -52,4 +52,6 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
         name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        run: |
+          echo ${{ steps.docker_build.outputs.digest }}
+          echo ${{ steps.docker_build2.outputs.digest }}
